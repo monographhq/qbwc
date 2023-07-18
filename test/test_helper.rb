@@ -55,6 +55,7 @@ module QbwcTestApplication
       if config.respond_to?(:hosts)
         config.hosts << 'www.example.com'
         config.hosts << ''
+        config.hosts << nil
       end
     end
     ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")

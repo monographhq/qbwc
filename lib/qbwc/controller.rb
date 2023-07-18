@@ -1,5 +1,12 @@
 require 'wash_out/version'
+
+wash_out = Gem::Specification.find_by_name("wash_out")
+if wash_out
+  require "#{wash_out.gem_dir}/app/helpers/wash_out_helper.rb"
+end
+
 include WashOut
+# include WashOutHelper
 
 module QBWC
   module Controller

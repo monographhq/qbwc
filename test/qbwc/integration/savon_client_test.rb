@@ -31,7 +31,7 @@ class SavonClientTest < ActionDispatch::IntegrationTest
 
     # https://github.com/savonrb/savon#usage-example
     # https://github.com/inossidabile/wash_out#usage
-    client = Savon::Client.new({:wsdl => url_base + url_path })
+    client = Savon::Client.new({:wsdl => url_base + url_path})
     result = client.call(:server_version, :message => nil)
 
     # Use this assertion when QBWC::Controller.server_version_response returns nil
